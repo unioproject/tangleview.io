@@ -572,6 +572,8 @@ img {
 .infobox-icons {
   vertical-align: text-bottom;
   margin: 0 7px 0 -7px;
+  width: 28px;
+  height: 28px;
 }
 
 .formular_wrapper {

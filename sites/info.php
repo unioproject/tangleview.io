@@ -13,14 +13,14 @@
     <div class="infobox-wrapper flex-between flex">
         <a href="<?php echo $devState;?>/graph">
             <div class="info-box bg-grey border-normal">
-                <h2 class="text-center bg-header"><img src="img/icon-rocket.png" class="infobox-icons" alt="">Graph</h2>
+                <h2 class="text-center bg-header"><img src="img/logo_header.png" class="infobox-icons" alt="">Graph</h2>
                 <p>The graph, known as tangle.glumb.de, visualizes the logic top&shy;ology of inter&shy;connections
                     between IOTA transactions.</p>
             </div>
         </a>
         <a href="<?php echo $devState;?>/monitor">
             <div class="info-box bg-grey border-normal">
-                <h2 class="text-center bg-header"><img src="img/icon-flexible.png" class="infobox-icons" alt="">Monitor
+                <h2 class="text-center bg-header"><img src="img/icon-monitor.png" class="infobox-icons" alt="">Monitor
                 </h2>
                 <p>This vis&shy;ualizer, known as tanglemonitor.com, displays the con&shy;fir&shy;mation pro&shy;cess in
                     a comprehensible way.</p>
@@ -29,7 +29,8 @@
 
         <a href="<?php echo $devState;?>/metrics">
             <div class="info-box bg-grey border-normal">
-                <h2 class="text-center bg-header"><img src="img/icon-easy.png" class="infobox-icons" alt="">Metrics</h2>
+                <h2 class="text-center bg-header"><img src="img/icon-metrics.png" class="infobox-icons" alt="">Metrics
+                </h2>
                 <p>The metrics section, pow&shy;ered by tanglebeat.com, pro&shy;vides de&shy;di&shy;cated charts of all
                     rel&shy;evant Tangle
                     measures.</p>
@@ -57,8 +58,8 @@
     <div class="info-features-wrapper flex flex-hcenter">
 
         <div class="info-features">
-            <div class="flex-center flex-hcenter bigger-text text-center bold"><img src="img/features/idea_black.png"
-                    alt="">Integrity of data source</div>
+            <div class="flex-center flex-hcenter bigger-text text-center bold"><img
+                    src="img/features/icon-integrity.png" alt="">Integrity of data source</div>
             <div class="bg-grey info-features-text">
                 Before, our Tangle analysis tools (tangle.glumb, tanglemonitor, tanglebeat) had gathered
                 their data independently. With tangleview.io the comparability of results is ensured.
@@ -66,7 +67,7 @@
         </div>
 
         <div class="info-features">
-            <div class="flex-center flex-hcenter bigger-text text-center bold"><img src="img/features/scale_black.png"
+            <div class="flex-center flex-hcenter bigger-text text-center bold"><img src="img/features/icon-api.png"
                     alt="">Open metrics API</div>
             <div class="bg-grey info-features-text">
                 tangleview.io offers an open metrics API. It allows you to query a wide variety of data, which could be
@@ -75,8 +76,8 @@
         </div>
 
         <div class="info-features">
-            <div class="flex-center flex-hcenter bigger-text text-center bold"><img
-                    src="img/features/maintenance_black.png" alt="">Historical data</div>
+            <div class="flex-center flex-hcenter bigger-text text-center bold"><img src="img/features/icon-history.png"
+                    alt="">Historical data</div>
             <div class="bg-grey info-features-text">
                 One major advantage of tangleview.io over our formerly seperated tools is the ability to access not only
                 recent data, but also specific dates in time of the past.
@@ -84,8 +85,8 @@
         </div>
 
         <div class="info-features">
-            <div class="flex-center flex-hcenter bigger-text text-center bold"><img src="img/features/cloud_black.png"
-                    alt="">Convenient dashboard</div>
+            <div class="flex-center flex-hcenter bigger-text text-center bold"><img
+                    src="img/features/icon-dashboard.png" alt="">Convenient dashboard</div>
             <div class="bg-grey info-features-text">
                 The new convenient dashboard displays all relevant data of the Tangle on a single page. Later on we will
                 also give you the option to configure your own dashboard.
@@ -93,8 +94,8 @@
         </div>
 
         <div class="info-features">
-            <div class="flex-center flex-hcenter bigger-text text-center bold"><img src="img/features/world_black.png"
-                    alt="">Dynamic timeframes</div>
+            <div class="flex-center flex-hcenter bigger-text text-center bold"><img
+                    src="img/features/icon-timeframe.png" alt="">Dynamic timeframes</div>
             <div class="bg-grey info-features-text">
                 On a later release we will not only allow you to access historic metrics, but also dynamically scroll
                 back in time with a handy slider and play back past events on the Tangle.
