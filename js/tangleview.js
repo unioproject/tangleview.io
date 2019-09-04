@@ -74,10 +74,11 @@ const getUrl = options => {
   if (options && options.host) {
     options.hostProtocol = `${options && options.ssl ? "https:" : "http:"}`;
     options.hostUrl = `${options.hostProtocol}//${options.host}`;
+    options.host = `${options.host}`;
   } else {
     options.hostProtocol = window.location.protocol;
-    options.host = window.location.hostname;
-    options.hostUrl = `${options.hostProtocol}//${options.host}`;
+    options.hostUrl = `${options.hostProtocol}//${window.location.hostname}`;
+    options.host = `${window.location.hostname}`;
   }
   return options;
 };
@@ -109,11 +110,16 @@ const lokiFind = (params, callback) => {
 
 // Fetch recent TX history from local or remote backend
 const InitialHistoryPoll = (that, options) => {
-  const apiUrl = `${options.hostUrl}:4433/api/v1/getRecentTransactions?amount=${
-    options && options.amount ? options.amount : txAmountToPollGlobal
-  }`;
+  const apiUrl =
+    options.host === "localhost"
+      ? `${options.hostUrl}:4433/api/v1/getRecentTransactions?amount=${
+          options && options.amount ? options.amount : txAmountToPollGlobal
+        }`
+      : `api.${options.host}/api/v1/getRecentTransactions?amount=${
+          options && options.amount ? options.amount : txAmountToPollGlobal
+        }`;
 
-  console.log(options.amount);
+  console.log(apiUrl);
 
   fetch(apiUrl, { cache: "no-cache" })
     .then(fetchedList => fetchedList.json())
@@ -194,7 +200,12 @@ const InitWebSocket = (that, options) => {
   if (!websocketActiveGlobal[options.host]) {
     websocketActiveGlobal[options.host] = true;
 
-    const webSocketUrl = `${options.hostUrl}:4434`; // Make port variable?
+    const webSocketUrl =
+      options.host === "localhost"
+        ? `${options.hostUrl}:4434`
+        : `ws.${options.host}`; // Make port variable?
+
+    console.log(webSocketUrl);
     const socket = io.connect(webSocketUrl, {
       secure: options.hostProtocol === "https:" ? true : false,
       reconnection: false
@@ -292,6 +303,8 @@ class tangleview {
     options = options ? options : {};
     options = getUrl(options);
     this.host = options.host;
+
+    console.log(options);
 
     tangleview.allInstances.push(this);
 
