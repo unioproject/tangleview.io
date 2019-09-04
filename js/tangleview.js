@@ -115,7 +115,7 @@ const InitialHistoryPoll = (that, options) => {
       ? `${options.hostUrl}:4433/api/v1/getRecentTransactions?amount=${
           options && options.amount ? options.amount : txAmountToPollGlobal
         }`
-      : `${options.hostProtocol}api.${
+      : `${options.hostProtocol}//api.${
           options.host
         }/api/v1/getRecentTransactions?amount=${
           options && options.amount ? options.amount : txAmountToPollGlobal
@@ -205,7 +205,7 @@ const InitWebSocket = (that, options) => {
     const webSocketUrl =
       options.host === "localhost"
         ? `${options.hostUrl}:4434`
-        : `${options.hostProtocol}ws.${options.host}`; // Make port variable?
+        : `${options.hostProtocol}//ws.${options.host}`; // Make port variable?
 
     console.log(webSocketUrl);
     const socket = io.connect(webSocketUrl, {
