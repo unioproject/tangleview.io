@@ -1,0 +1,12 @@
+.charts-container {
+  width: 90%;
+  height: 100%;
+  /*margin-top: 50px;*/
+  margin: 50px auto;
+}
+
+.charts {
+  width: 600px;
+  height: 400px;
+  /*margin: 30px;*/
+}

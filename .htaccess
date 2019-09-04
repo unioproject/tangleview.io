@@ -1,0 +1,13 @@
+Options +FollowSymLinks
+RewriteEngine on
+DirectorySlash Off
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+RewriteRule ^info /index.php [L]
+RewriteRule ^dashboard /index.php [L]
+RewriteRule ^graph /index.php [L]
+RewriteRule ^monitor /index.php [L]
+RewriteRule ^metrics /index.php [L]
+RewriteRule ^about /index.php [L]
+
