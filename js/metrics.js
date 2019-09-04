@@ -101,7 +101,7 @@ const createCanvas = (createCanvas, iter) => {
 const fetchChartData = query => {
   return new Promise((resolve, reject) => {
     fetch(
-      `http://tangleview.io:9090/api/v1/query_range?query=${query}&start=${time /
+      `https://api.tangleview.io/api/v1/query_range?query=${query}&start=${time /
         1000 -
         timeframeOfHistory}&end=${time / 1000}&step=${timeStep}`
     )
