@@ -22,7 +22,16 @@ const transformTx = input => {
 
 const tanglegraphMain = () => {
   if (typeof tangle === "undefined")
-    tangle = new tangleview({ host: "localhost", ssl: false, amount: 8000 });
+    tangle = new tangleview({
+      host: window.location.hostname,
+      ssl: false,
+      amount: 8000
+    });
+
+  console.log(
+    "tanglegraph debug (window.location.hostname)",
+    window.location.hostname
+  );
 
   tangle
     .getTxHistory({ amount: 8000 })
