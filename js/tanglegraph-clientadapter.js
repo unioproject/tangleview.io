@@ -24,7 +24,7 @@ const tanglegraphMain = () => {
   if (typeof tangle === "undefined")
     tangle = new tangleview({
       host: window.location.hostname,
-      ssl: false,
+      ssl: window.location.protocol === "https" ? true : false,
       amount: 8000
     });
 
